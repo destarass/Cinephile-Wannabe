@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinephile Wannabe — Movie Community</title>
+    <meta name="description"
+        content="Cinephile Wannabe adalah komunitas Discord untuk pecinta film. Gabung untuk diskusi film, movie night, rekomendasi tontonan, dan nongkrong bareng sesama penikmat sinema.">
+    <meta property="og:title" content="Cinephile Wannabe — Movie Community">
+    <meta property="og:description"
+        content="Komunitas Discord untuk pecinta film dari segala genre. Diskusi, movie night, rekomendasi, dan vibes sinema.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- ===== LOADING SCREEN ===== -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-stars" id="loading-stars"></div>
+        <div class="loading-nebula loading-nebula-1"></div>
+        <div class="loading-nebula loading-nebula-2"></div>
+        <div class="loading-content">
+            <div class="loading-orbit">
+                <div class="loading-ring loading-ring-1"></div>
+                <div class="loading-ring loading-ring-2"></div>
+                <div class="loading-ring loading-ring-3"></div>
+                <div class="loading-logo-container" id="loading-logo">
+                    <video class="loading-logo-video" autoplay loop muted playsinline preload="auto">
+                        <source src="./logo.mp4" type="video/mp4">
+                    </video>
+                    <img src="./logo.gif" alt="Cinephile Wannabe" class="loading-logo-fallback">
+                </div>
+            </div>
+            <p class="loading-text" id="loading-text">Entering the Cinephile Orbit...</p>
+            <div class="loading-bar-wrap">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN SITE (hidden until loaded) ===== -->
+    <div id="site-wrapper" class="site-wrapper">
+
+        <!-- Star Canvas Background -->
+        <canvas id="star-canvas"></canvas>
+
+        <!-- Film Grain Overlay -->
+        <div class="film-grain" aria-hidden="true"></div>
+
+        <!-- Nebula Glow Elements -->
+        <div class="nebula nebula-1" aria-hidden="true"></div>
+        <div class="nebula nebula-2" aria-hidden="true"></div>
+        <div class="nebula nebula-3" aria-hidden="true"></div>
+
+        <!-- Navigation -->
+        <nav id="navbar" class="navbar">
+            <div class="nav-inner">
+                <a href="#hero" class="nav-brand">Cinephile Wannabe</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#recommendations">Films</a></li>
+                    <li><a href="#vibe">Vibe</a></li>
+                    <li><a href="#join">Join</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- ===== 1. HERO SECTION ===== -->
+            <section id="hero" class="hero-section">
+                <div class="hero-content">
+                    <p class="eyebrow reveal">Movie Community</p>
+
+                    <div class="logo-wrapper reveal" id="hero-logo-wrapper">
+                        <div class="orbit-ring orbit-ring-1" aria-hidden="true"></div>
+                        <div class="orbit-ring orbit-ring-2" aria-hidden="true"></div>
+                        <div class="orbit-ring orbit-ring-3" aria-hidden="true"></div>
+                        <div class="orbit-particle orbit-particle-1" aria-hidden="true"></div>
+                        <div class="orbit-particle orbit-particle-2" aria-hidden="true"></div>
+                        <div class="orbit-particle orbit-particle-3" aria-hidden="true"></div>
+                        <div class="hero-logo-container" id="hero-logo">
+                            <video class="hero-logo-video" autoplay loop muted playsinline preload="auto">
+                                <source src="./logo.mp4" type="video/mp4">
+                            </video>
+                            <img src="./logo.gif" alt="Cinephile Wannabe Logo" class="hero-logo-fallback">
+                        </div>
+                        <div class="logo-glow-pulse" aria-hidden="true"></div>
+                    </div>
+
+                    <h1 class="hero-title reveal">Cinephile Wannabe</h1>
+                    <p class="hero-subtitle reveal">Tempat buat ngobrolin film, ikut movie night, share rekomendasi
+                        tontonan, review scene favorit, dan nongkrong bareng sesama penikmat sinema.</p>
+
+                    <div class="hero-cta reveal">
+                        <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" class="btn-glow"
+                            id="cta-join-hero">Join Discord</a>
+                        <a href="#about" class="btn-glass" id="cta-explore">Explore Server</a>
+                    </div>
+
+                    <div class="scroll-indicator reveal" aria-hidden="true">
+                        <div class="scroll-line"></div>
+                        <span>Scroll</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 2. ABOUT SECTION ===== -->
+            <section id="about" class="about-section">
+                <div class="section-inner">
+                    <h2 class="section-heading reveal">A Space for Cinema Lovers</h2>
+                    <div class="about-text reveal">
+                        <p>Cinephile Wannabe adalah ruang santai buat siapa pun yang suka nonton film — dari yang
+                            ngikutin setiap blockbuster rilis, sampai yang diam-diam ngulang film indie jam 2 pagi. Di
+                            sini, nggak ada batasan genre. Horor, sci-fi, thriller, drama, anime movie, atau film random
+                            yang baru ketemu di rekomendasi algoritmamu — semuanya bisa jadi topik obrolan.</p>
+                        <p>Bukan cuma soal nonton. Ini tentang punya tempat buat share pendapat, denger perspektif baru,
+                            dan ketemu orang-orang yang sama-sama ngerti kenapa satu scene bisa bikin kita mikir
+                            berhari-hari.</p>
+                        <p>Kalau kamu butuh komunitas yang nggak judgmental, nggak ribet, dan selalu punya rekomendasi
+                            tontonan — kamu udah di tempat yang tepat.</p>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-card glass-card reveal" style="--float-delay: 0s;">
+                            <div class="highlight-icon">&#9734;</div>
+                            <h3>Open for Everyone</h3>
+                            <p>Siapa pun boleh gabung, dari casual viewer sampai film nerd sejati.</p>
+                        </div>
+                        <div class="highlight-card glass-card reveal" style="--float-delay: 0.5s;">
+                            <div class="highlight-icon">&#9786;</div>
+                            <h3>Chill Discussion</h3>
+                            <p>Diskusi santai tanpa drama, tanpa tekanan, cuma vibes film yang asik.</p>
+                        </div>
+                        <div class="highlight-card glass-card reveal" style="--float-delay: 1s;">
+                            <div class="highlight-icon">&#9654;</div>
+                            <h3>Movie Night Ready</h3>
+                            <p>Watch party bareng komunitas kapan pun mood nonton datang.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 3. FEATURES SECTION ===== -->
+            <section id="features" class="features-section">
+                <div class="section-inner">
+                    <h2 class="section-heading reveal">What You'll Find Here</h2>
+                    <div class="features-grid">
+                        <div class="feature-card glass-card reveal" style="--float-delay: 0s;">
+                            <div class="feature-icon-wrap"><span class="feature-icon">&#127916;</span></div>
+                            <h3>Movie Discussion</h3>
+                            <p>Bahas plot, karakter, teori, ending, sampai detail kecil yang bikin film terasa hidup.
+                            </p>
+                        </div>
+                        <div class="feature-card glass-card reveal" style="--float-delay: 0.3s;">
+                            <div class="feature-icon-wrap"><span class="feature-icon">&#127911;</span></div>
+                            <h3>Watch Party</h3>
+                            <p>Ikut movie night bareng komunitas dan rasain vibes nonton yang lebih seru.</p>
+                        </div>
+                        <div class="feature-card glass-card reveal" style="--float-delay: 0.6s;">
+                            <div class="feature-icon-wrap"><span class="feature-icon">&#127775;</span></div>
+                            <h3>Film Recommendation</h3>
+                            <p>Cari tontonan baru dari rekomendasi member, mulai dari film populer sampai hidden gem.
+                            </p>
+                        </div>
+                        <div class="feature-card glass-card reveal" style="--float-delay: 0.9s;">
+                            <div class="feature-icon-wrap"><span class="feature-icon">&#9997;</span></div>
+                            <h3>Review &amp; Rating</h3>
+                            <p>Share pendapat, kasih rating, dan baca sudut pandang lain dari sesama penikmat sinema.
+                            </p>
+                        </div>
+                        <div class="feature-card glass-card reveal" style="--float-delay: 1.2s;">
+                            <div class="feature-icon-wrap"><span class="feature-icon">&#9749;</span></div>
+                            <h3>Chill Chat</h3>
+                            <p>Ngobrol santai di luar topik film, tetap hangat, tetap fun, tetap nyaman.</p>
+                        </div>
+                        <div class="feature-card glass-card reveal" style="--float-delay: 1.5s;">
+                            <div class="feature-icon-wrap"><span class="feature-icon">&#127881;</span></div>
+                            <h3>Community Events</h3>
+                            <p>Ikut event, challenge, polling film, dan aktivitas komunitas lainnya.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 4. FILM RECOMMENDATIONS CAROUSEL ===== -->
+            <section id="recommendations" class="recommendations-section">
+                <div class="section-inner">
+                    <h2 class="section-heading reveal">Film Recommendations</h2>
+                    <p class="reco-subtitle reveal">Top IMDb films yang sering dibahas dan jadi favorit komunitas.</p>
+
+                    <div class="carousel-wrapper reveal">
+                        <button class="carousel-btn carousel-prev" id="carousel-prev"
+                            aria-label="Previous">&#8249;</button>
+
+                        <div class="carousel-viewport" id="carousel-viewport">
+                            <div class="carousel-track" id="carousel-track">
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                                        alt="Interstellar" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#22</span><span
+                                                class="film-rating">&#9733; 8.7</span></div>
+                                        <h3 class="film-title">Interstellar</h3>
+                                        <span class="film-year">2014</span>
+                                        <p class="film-desc">Astronaut menjelajahi wormhole di luar angkasa demi
+                                            menemukan rumah baru bagi umat manusia yang terancam punah.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+                                        alt="The Godfather" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#2</span><span
+                                                class="film-rating">&#9733; 9.2</span></div>
+                                        <h3 class="film-title">The Godfather</h3>
+                                        <span class="film-year">1972</span>
+                                        <p class="film-desc">Patriark mafia Corleone menyerahkan kerajaan kepada
+                                            putranya yang enggan, dalam saga kekuasaan dan keluarga yang epik.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+                                        alt="Parasite" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#26</span><span
+                                                class="film-rating">&#9733; 8.5</span></div>
+                                        <h3 class="film-title">Parasite</h3>
+                                        <span class="film-year">2019</span>
+                                        <p class="film-desc">Keluarga miskin menyusup ke kehidupan keluarga kaya, memicu
+                                            kejadian tak terduga yang mengungkap jurang kelas sosial.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg"
+                                        alt="The Godfather Part II" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#4</span><span
+                                                class="film-rating">&#9733; 9.0</span></div>
+                                        <h3 class="film-title">The Godfather Part II</h3>
+                                        <span class="film-year">1974</span>
+                                        <p class="film-desc">Michael Corleone memperluas kerajaan keluarga sementara
+                                            flashback mengungkap perjalanan ayahnya dari Sisilia.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg"
+                                        alt="Forrest Gump" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#12</span><span
+                                                class="film-rating">&#9733; 8.8</span></div>
+                                        <h3 class="film-title">Forrest Gump</h3>
+                                        <span class="film-year">1994</span>
+                                        <p class="film-desc">Pria sederhana dengan IQ rendah menyaksikan dan tanpa
+                                            sengaja ikut membentuk momen-momen penting dalam sejarah Amerika.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+                                        alt="Schindler's List" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#6</span><span
+                                                class="film-rating">&#9733; 9.0</span></div>
+                                        <h3 class="film-title">Schindler's List</h3>
+                                        <span class="film-year">1993</span>
+                                        <p class="film-desc">Pengusaha Jerman menyelamatkan lebih dari seribu pengungsi
+                                            Yahudi dari Holocaust lewat pabriknya.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
+                                        alt="LOTR: Return of the King" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#7</span><span
+                                                class="film-rating">&#9733; 9.0</span></div>
+                                        <h3 class="film-title">LOTR: Return of the King</h3>
+                                        <span class="film-year">2003</span>
+                                        <p class="film-desc">Gandalf dan Aragorn memimpin pasukan melawan Sauron
+                                            sementara Frodo mendekati Gunung Doom.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
+                                        alt="Pulp Fiction" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#8</span><span
+                                                class="film-rating">&#9733; 8.9</span></div>
+                                        <h3 class="film-title">Pulp Fiction</h3>
+                                        <span class="film-year">1994</span>
+                                        <p class="film-desc">Kisah kriminal yang saling terkait dari pembunuh bayaran,
+                                            petinju, dan gangster dalam narasi non-linear ikonik.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg"
+                                        alt="The Matrix" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#16</span><span
+                                                class="film-rating">&#9733; 8.7</span></div>
+                                        <h3 class="film-title">The Matrix</h3>
+                                        <span class="film-year">1999</span>
+                                        <p class="film-desc">Hacker menemukan bahwa realitas yang dikenalnya adalah
+                                            simulasi dan bergabung dengan pemberontak melawan mesin.</p>
+                                    </div>
+                                </div>
+
+                                <div class="film-card glass-card">
+                                    <img class="film-poster"
+                                        src="https://image.tmdb.org/t/p/w300/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg"
+                                        alt="Inception" loading="lazy">
+                                    <div class="film-info">
+                                        <div class="film-meta"><span class="film-rank">#14</span><span
+                                                class="film-rating">&#9733; 8.8</span></div>
+                                        <h3 class="film-title">Inception</h3>
+                                        <span class="film-year">2010</span>
+                                        <p class="film-desc">Pencuri yang mencuri rahasia dari alam bawah sadar ditawari
+                                            misi menanamkan ide ke pikiran target.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next">&#8250;</button>
+                    </div>
+
+                    <div class="carousel-dots reveal" id="carousel-dots"></div>
+                </div>
+            </section>
+
+            <!-- ===== 5. SERVER VIBE SECTION ===== -->
+            <section id="vibe" class="vibe-section">
+                <div class="section-inner">
+                    <h2 class="section-heading reveal">Server Vibe</h2>
+
+                    <div class="vibe-pills reveal">
+                        <span class="vibe-pill">chill</span>
+                        <span class="vibe-pill">movie talk</span>
+                        <span class="vibe-pill">late night discussion</span>
+                        <span class="vibe-pill">no pressure</span>
+                        <span class="vibe-pill">random recommendation</span>
+                        <span class="vibe-pill">watch together</span>
+                        <span class="vibe-pill">cinema nerd energy</span>
+                        <span class="vibe-pill">friendly community</span>
+                    </div>
+
+                    <div class="vibe-cards">
+                        <div class="vibe-card glass-card reveal" style="--float-delay: 0s;">
+                            <h3>Buat Yang Suka Deep Talk</h3>
+                            <p>Kamu yang bisa ngobrol panjang soal satu film, bedah karakter, analisis sinematografi,
+                                sampai debat ending — di sini tempatnya.</p>
+                        </div>
+                        <div class="vibe-card glass-card reveal" style="--float-delay: 0.4s;">
+                            <h3>Buat Yang Nyari Tontonan</h3>
+                            <p>Nggak tahu mau nonton apa? Tinggal tanya. Selalu ada yang punya rekomendasi dari genre
+                                apa pun yang kamu suka.</p>
+                        </div>
+                        <div class="vibe-card glass-card reveal" style="--float-delay: 0.8s;">
+                            <h3>Buat Yang Mau Nongkrong</h3>
+                            <p>Kadang kamu cuma butuh tempat buat ngobrol santai, ketawa, dan enjoy bareng orang-orang
+                                yang vibesnya cocok.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- ===== 7. FINAL CTA SECTION ===== -->
+            <section id="join" class="cta-section">
+                <div class="cta-glow-bg" aria-hidden="true"></div>
+                <div class="section-inner cta-inner">
+                    <h2 class="cta-heading reveal">Ready to Enter the Orbit?</h2>
+                    <p class="cta-text reveal">Gabung ke server Discord Cinephile Wannabe dan mulai jelajahi dunia
+                        sinema bareng komunitas yang seru, santai, dan selalu punya rekomendasi tontonan baru.</p>
+                    <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer"
+                        class="btn-glow btn-glow-lg reveal" id="cta-join-final">Join Discord</a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== 8. FOOTER ===== -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Cinephile Wannabe. Built for movie lovers drifting through the stars.</p>
+        </footer>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
